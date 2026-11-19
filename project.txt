@@ -1,0 +1,5 @@
+name=X-Men: Mutant Apocalypse
+rom_file=X-Men - Mutant Apocalypse (USA).sfc
+rom_sha256=65fe17fd6b297f52df6ce9812ecb02c3bb1bfda3ebc05a19c4a8decbf9a446ae
+normalized_size=2097152
+mapping=hirom

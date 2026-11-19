@@ -1,0 +1,18 @@
+# X-Men: Mutant Apocalypse runtime interpreter targets
+# Cooperative task scheduler / stack-switchers (Bank $C0):
+0xC000A0
+0xC000C3
+0xC000E5
+0xC000F7
+0xC00107
+0xC00112
+0xC0011E
+0xC0013E
+0xC00159
+0xC01219
+0xC04349
+# Inline-parameter JSL helpers:
+0xC11C94
+0xD0048B
+0xC87204
+0xC87F30

@@ -1,0 +1,27 @@
+# Build artifacts
+build/
+bin/
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# Cache & logs
+.snesrecomp-cache.json
+*.log
+*.tmp
+
+# Commercial ROMs and movie dumps (strictly forbidden to redistribute)
+*.smc
+*.sfc
+*.bin
+*.tape
+*.smv
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.swp
+*~
