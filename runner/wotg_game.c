@@ -1,16 +1,28 @@
 #include "wotg_game.h"
 #include "beam_frame_driver.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 static void WotgInitialize(void) {
     if (!getenv("SNESRECOMP_LLE_INTERP_TARGET_FILE")) {
+        const char *candidates[] = {
+            "runner/wotg_interp_targets.txt",
+            "../runner/wotg_interp_targets.txt",
+            "wotg_interp_targets.txt",
+            NULL
+        };
+        for (int i = 0; candidates[i]; i++) {
+            FILE *f = fopen(candidates[i], "r");
+            if (f) {
+                fclose(f);
 #ifdef _WIN32
-        _putenv_s("SNESRECOMP_LLE_INTERP_TARGET_FILE",
-                  "D:\\RecompProject\\XMenMutantApocalypseRecomp\\runner\\wotg_interp_targets.txt");
+                _putenv_s("SNESRECOMP_LLE_INTERP_TARGET_FILE", candidates[i]);
 #else
-        setenv("SNESRECOMP_LLE_INTERP_TARGET_FILE",
-               "D:/RecompProject/XMenMutantApocalypseRecomp/runner/wotg_interp_targets.txt", 0);
+                setenv("SNESRECOMP_LLE_INTERP_TARGET_FILE", candidates[i], 1);
 #endif
+                break;
+            }
+        }
     }
     if (!getenv("SNESRECOMP_INTERP_STEP_CAP")) {
 #ifdef _WIN32
