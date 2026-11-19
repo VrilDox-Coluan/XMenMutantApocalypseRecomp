@@ -1,12 +1,12 @@
-# X-Men: Mutant Apocalypse â€” Native Static Recompilation
+# X-Men: Mutant Apocalypse — Native Static Recompilation
 
 > [!WARNING]
-> ### âš ï¸  Legal Disclaimer: Bring Your Own Dump
+> ### ⚠️ Legal Disclaimer: Bring Your Own Dump
 > **No game data is in this repository. No ROM, no assets, no proprietary data. Bring your own dump** (*X-Men - Mutant Apocalypse (USA).sfc*, 2 MiB headerless, SHA-256 `65fe17fd6b297f52df6ce9812ecb02c3bb1bfda3ebc05a19c4a8decbf9a446ae`, CRC32 `5e34822a`).
 > The original game assets (graphics, sound, palettes, music sequences) are loaded directly from your own legally obtained ROM file at runtime. This repository contains only reverse-engineered runner code, recompilation tooling, and static translation scaffolding.
 
 > [!NOTE]
-> ### ðŸ›‘ Project Status: Archived / Research Foundation (Up for Grabs)
+> ### 🛑 Project Status: Archived / Research Foundation (Up for Grabs)
 > **This project will NOT be actively maintained or updated by the author.**
 > It is released strictly as an educational proof-of-concept and open research foundation for the reverse engineering, decompilation, and emulation communities. The project is fully functional up through active gameplay at 60 FPS and is **up for grabs** for anyone interested in forking, refining AOT coverage, implementing true widescreen viewport expansions, or adding custom modding support.
 
@@ -22,13 +22,13 @@ This project translates the original SNES 65816 machine code into native C11, ru
 
 | Subsystem | Progress | Status | Notes |
 | :--- | :--- | :--- | :--- |
-| **Boot & Intro** | `â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ` 100% | Complete | Capcom logo, Marvel intro, Title screen & mode select |
-| **Audio (SPC700 / DSP)** | `â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ` 100% | Complete | Music & sound effects running via native SPC700 core |
-| **Input & Savestates** | `â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ` 100% | Complete | Keyboard / gamepad mapping, quick save/load, frame step |
-| **Character Physics & Combat** | `â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘` 85% | Functional | Movement, combos, attacks, collision boxes, health/damage |
-| **Stage 1 (Genosha / Wolverine)** | `â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘` 80% | Playable | Wolverine intro stage playable at full 60 FPS |
-| **AOT Code Coverage** | `â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘â–‘â–‘` 65% | Partial | 171 roots mapped (415 variants); scheduler safe in LLE fallback |
-| **Adaptive Widescreen** | `â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘â–‘` 70% | Experimental | Viewport expanded via SDL3; widescreen camera clipping WIP |
+| **Boot & Intro** | `██████████` 100% | Complete | Capcom logo, Marvel intro, Title screen & mode select |
+| **Audio (SPC700 / DSP)** | `██████████` 100% | Complete | Music & sound effects running via native SPC700 core |
+| **Input & Savestates** | `██████████` 100% | Complete | Keyboard / gamepad mapping, quick save/load, frame step |
+| **Character Physics & Combat** | `████████░░` 85% | Functional | Movement, combos, attacks, collision boxes, health/damage |
+| **Stage 1 (Genosha / Wolverine)** | `████████░░` 80% | Playable | Wolverine intro stage playable at full 60 FPS |
+| **AOT Code Coverage** | `██████░░░░` 65% | Partial | 171 roots mapped (415 variants); scheduler safe in LLE fallback |
+| **Adaptive Widescreen** | `███████░░░` 70% | Experimental | Viewport expanded via SDL3; widescreen camera clipping WIP |
 
 ---
 
@@ -133,20 +133,20 @@ Place the ROM file in the project root or pass it via command line:
 
 ```text
 XMenMutantApocalypseRecomp/
-â”œâ”€â”€ config/              # Function signatures, safe promotion sets, and bank definitions
-â”‚   â”œâ”€â”€ funcs.h          # Function declarations for AOT code
-â”‚   â””â”€â”€ xmen_tier2_safe.json # 171 roots promoted to AOT
-â”œâ”€â”€ generated/           # Recompiled C sources from original 65816 machine code
-â”œâ”€â”€ runner/              # Custom game runner, lifecycle hooks, and widescreen config
-â”‚   â”œâ”€â”€ desktop_main.c   # Desktop entry point and aspect ratio logic
-â”‚   â”œâ”€â”€ wotg_game.c      # Shared Capcom engine lifecycle and environment init
-â”‚   â””â”€â”€ wotg_interp_targets.txt # Scheduler targets safely delegated to interpreter
-â”œâ”€â”€ snesrecomp/          # Vendored snesrecomp runtime, PPU/APU driver, and framework
-â”œâ”€â”€ tools/               # Analysis and tape generation utilities
-â”œâ”€â”€ CMakeLists.txt       # Unified CMake build configuration
-â”œâ”€â”€ build.ps1            # Windows one-click build script
-â”œâ”€â”€ build.sh             # Linux one-click build script
-â””â”€â”€ README.md
+├── config/              # Function signatures, safe promotion sets, and bank definitions
+│   ├── funcs.h          # Function declarations for AOT code
+│   └── xmen_tier2_safe.json # 171 roots promoted to AOT
+├── generated/           # Recompiled C sources from original 65816 machine code
+├── runner/              # Custom game runner, lifecycle hooks, and widescreen config
+│   ├── desktop_main.c   # Desktop entry point and aspect ratio logic
+│   ├── wotg_game.c      # Shared Capcom engine lifecycle and environment init
+│   └── wotg_interp_targets.txt # Scheduler targets safely delegated to interpreter
+├── snesrecomp/          # Vendored snesrecomp runtime, PPU/APU driver, and framework
+├── tools/               # Analysis and tape generation utilities
+├── CMakeLists.txt       # Unified CMake build configuration
+├── build.ps1            # Windows one-click build script
+├── build.sh             # Linux one-click build script
+└── README.md
 ```
 
 ---
