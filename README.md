@@ -41,6 +41,12 @@ This project translates the original SNES 65816 machine code into native C11, ru
 
 ---
 
+## 📖 Developer Handover & Technical Notes
+
+> **Notice for Contributors:** If you are interested in continuing this project, comprehensive reverse-engineering findings, open-bus hardware checks, bank memory layouts, and adaptive widescreen notes have been compiled in **[docs/DEVELOPER_NOTES.md](docs/DEVELOPER_NOTES.md)**.
+
+---
+
 ## Technical Highlights & Engine Architecture
 
 ### Cooperative Fiber Scheduler & Stack Frames
