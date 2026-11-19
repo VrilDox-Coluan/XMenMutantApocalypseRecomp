@@ -170,8 +170,20 @@ XMenMutantApocalypseRecomp/
 
 - **Character Coverage**: Test and validate full missions for Cyclops, Psylocke, Beast, and Gambit.
 - **Enhanced Widescreen**: Reverse-engineer horizontal sprite and tilemap clipping boundaries to eliminate edge pop-in.
-- **IPS Patch Support**: Port popular community patches (e.g., *Mutant Apocalypse Rebalanced*, SRAM save patch, language localizations).
-- **In-Game Overlay Menu**: Adapt the debug/stage-select menu from *War of the Gems* for mission select and boss rush.
+- **IPS Patch Support**: Port popular community patches:
+  - **X-Men: Mutant Apocalypse - Rebalanced** by **BlastoBR**: Adds one-button special moves (X button), mobility enhancements across the X-Men team, refreshed costume colors, and Bank `$D6` balance table tweaks.
+  - **SRAM Save & Quality of Life Patches**: Automatic password persistence and language localizations.
+- **In-Game Overlay Menu**: Adapt the debug/stage-select menu from sister project *War of the Gems* for mission select and boss rush.
+
+---
+
+## 👏 Community Credits & ROM Hack Authors
+
+Huge thanks to the ROM hackers and researchers whose work helped accelerate our understanding of Capcom's SNES engine:
+
+- **[BlastoBR](https://www.romhacking.net/community/6604/)**: Creator of *X-Men: Mutant Apocalypse - Rebalanced* (mobility overhauls, one-button specials, and balance tables).
+- **[BillyTime! Games](https://www.romhacking.net/community/5645/)**: For extensive research and documentation on Capcom's 65816 fiber architecture and sister game *War of the Gems*.
+- **[spinda](https://github.com/spinda)** & the `snesrecomp` project contributors for the underlying static recompilation engine and runner.
 
 ---
 

@@ -77,3 +77,12 @@ The runner includes custom frame preparation logic (`XmenPrepareFrame`) in `runn
    - Widen camera limits in Bank `$C1` and object culling tests in Bank `$C2`.
 3. **Cross-Engine Knowledge**:
    - Refer to the sister project [WarOfTheGemsRecomp](https://github.com/VrilDox-Coluan/WarOfTheGemsRecomp) for in-game launcher menu implementation (`M` key overlay) and savestate thumbnail browser (`F7`).
+
+---
+
+## 6. Community Credits & Acknowledgments
+
+Special recognition to the ROM hackers and researchers whose work helped map the Capcom SNES engine:
+- **BlastoBR**: Author of *X-Men: Mutant Apocalypse - Rebalanced*.
+- **BillyTime! Games**: Author of *War of the Gems Redux* and extensive Capcom SNES engine research.
+- **spinda**: Author of `snesrecomp`.
