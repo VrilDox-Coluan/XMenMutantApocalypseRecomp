@@ -1,14 +1,23 @@
 # X-Men: Mutant Apocalypse — Native Static Recompilation
 
+[![Status: Up For Grabs](https://img.shields.io/badge/status-up_for_grabs-brightgreen.svg)](https://github.com/VrilDox-Coluan/XMenMutantApocalypseRecomp)
+[![Engine: snesrecomp](https://img.shields.io/badge/engine-snesrecomp-blue.svg)](https://github.com/VrilDox-Coluan/XMenMutantApocalypseRecomp)
+[![Stack: C11 | SDL3](https://img.shields.io/badge/stack-C11%20%7C%20SDL3-orange.svg)](https://github.com/VrilDox-Coluan/XMenMutantApocalypseRecomp)
+[![Sister Project: War of the Gems Recomp](https://img.shields.io/badge/sister_project-War%20of%20the%20Gems%20Recomp-purple.svg)](https://github.com/VrilDox-Coluan/WarOfTheGemsRecomp)
+
 > [!WARNING]
 > ### ⚠️ Legal Disclaimer: Bring Your Own Dump
 > **No game data is in this repository. No ROM, no assets, no proprietary data. Bring your own dump** (*X-Men - Mutant Apocalypse (USA).sfc*, 2 MiB headerless, SHA-256 `65fe17fd6b297f52df6ce9812ecb02c3bb1bfda3ebc05a19c4a8decbf9a446ae`, CRC32 `5e34822a`).
 > The original game assets (graphics, sound, palettes, music sequences) are loaded directly from your own legally obtained ROM file at runtime. This repository contains only reverse-engineered runner code, recompilation tooling, and static translation scaffolding.
 
 > [!NOTE]
-> ### 🛑 Project Status: Archived / Research Foundation (Up for Grabs)
-> **This project will NOT be actively maintained or updated by the author.**
-> It is released strictly as an educational proof-of-concept and open research foundation for the reverse engineering, decompilation, and emulation communities. The project is fully functional up through active gameplay at 60 FPS and is **up for grabs** for anyone interested in forking, refining AOT coverage, implementing true widescreen viewport expansions, or adding custom modding support.
+> ### 🛑 Project Status: Archived / Up for Grabs
+> **This project is on hold and will NOT be actively maintained or updated by the author.**
+> Please note that the author has ceased active development on **both** Capcom SNES recompilation projects:
+> - **X-Men: Mutant Apocalypse Recomp** (this repository)
+> - [Marvel Super Heroes: War of the Gems Recomp](https://github.com/VrilDox-Coluan/WarOfTheGemsRecomp) (sister project sharing the Capcom fiber-scheduler engine)
+>
+> Both repositories are released as public research foundations for the emulation, decompilation, and speedrunning communities. They are fully playable up through active gameplay at 60 FPS and are **up for grabs** for anyone interested in forking, refining AOT coverage, implementing true widescreen viewport expansions, or adding custom modding support.
 
 ---
 
